@@ -42,7 +42,7 @@ routesAuth.post(
   authController.update
 );
 
-routesAuth.get("/me", authMiddleware, authController.me);
+routesAuth.get("/me:id", authMiddleware, authController.me);
 
 routesAuth.post(
   "/login",

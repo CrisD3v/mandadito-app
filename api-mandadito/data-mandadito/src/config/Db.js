@@ -77,7 +77,7 @@ const { User, Role, InvalidatedToken } = sequelize.models;
  * Definición de relaciones entre modelos (comentado actualmente)
  * Aquí se definirían las relaciones entre las diferentes tablas
  */
-// Users.belongsTo(Rol);
+User.belongsTo(Role);
 // Users.hasMany(Orders);
 // Orders.belongsTo(Users);
 // Cart.belongsTo(Users);
