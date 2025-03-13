@@ -85,7 +85,7 @@ class AuthService {
         if (!isMatch) throw new Error('Credenciales inválidas'); // Si no es correcta, lanzamos un error
 
         // Generamos un token JWT
-        const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1h' }); // El token expira en 1 hora
+        const token = jwt.sign({ id: user.id, name: user.name, last_name: user.last_name, role: user.role_id }, process.env.JWT_SECRET, { expiresIn: '1h' }); // El token expira en 1 hora
 
         // Retornamos el token
         return { token };
