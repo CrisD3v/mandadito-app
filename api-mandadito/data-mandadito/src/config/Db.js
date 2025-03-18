@@ -71,7 +71,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 /**
  * Desestructuración de modelos para uso directo
  */
-const { User, Role, InvalidatedToken } = sequelize.models;
+const { User, Role, InvalidatedToken, Order, CodeOrder } = sequelize.models;
 
 /**
  * Definición de relaciones entre modelos (comentado actualmente)

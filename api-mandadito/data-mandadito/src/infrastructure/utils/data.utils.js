@@ -38,6 +38,36 @@ const dataUtils = {
 
             next(); // Continuar con el siguiente middleware si no hay errores
         };
+    },
+
+    /**
+     * Genera un código OTP (Contraseña de un solo uso) aleatorio de 6 dígitos
+     * Este código se utiliza para identificar de manera única cada orden en el sistema
+     * 
+     * @function generateOTP
+     * @memberof dataUtils
+     * @returns {string} El código OTP de 6 dígitos generado
+     * 
+     * @description
+     * La función:
+     * 1. Crea una cadena que contiene todos los dígitos posibles (0-9)
+     * 2. Itera 6 veces para generar un dígito aleatorio cada vez
+     * 3. Concatena los dígitos aleatorios para formar el OTP final
+     * 
+     * @example
+     * const otp = dataUtils.generateOTP();
+     * console.log(otp); // Ejemplo de salida: "847591"
+     */
+    generateOTP: () => {
+        const digits = '0123456789';
+        let OTP = '';
+
+        // Genera 6 dígitos aleatorios
+        for (let i = 0; i < 6; i++) {
+            OTP += digits[Math.floor(Math.random() * 10)];
+        }
+
+        return OTP;
     }
 }
 
