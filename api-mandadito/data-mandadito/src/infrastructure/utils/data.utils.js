@@ -38,6 +38,7 @@ const dataUtils = {
 
             next(); // Continuar con el siguiente middleware si no hay errores
         };
+<<<<<<< HEAD
     },
 
     /**
@@ -68,6 +69,8 @@ const dataUtils = {
         }
 
         return OTP;
+=======
+>>>>>>> 2ab8454 (➕add : Añadiendo DeliveryApp como carpeta normal)
     }
 }
 

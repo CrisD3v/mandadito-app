@@ -71,7 +71,11 @@ sequelize.models = Object.fromEntries(capsEntries);
 /**
  * Desestructuración de modelos para uso directo
  */
+<<<<<<< HEAD
 const { User, Role, InvalidatedToken, Order, CodeOrder } = sequelize.models;
+=======
+const { User, Role, InvalidatedToken } = sequelize.models;
+>>>>>>> 2ab8454 (➕add : Añadiendo DeliveryApp como carpeta normal)
 
 /**
  * Definición de relaciones entre modelos (comentado actualmente)
