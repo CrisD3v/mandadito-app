@@ -3,7 +3,7 @@ import { UserRepositoryImpl } from '../../../infrastructure/user/repositories/us
 import { User } from '../../../domain/user/entities/user.entity';
 import { UpdateUserDto } from 'src/infrastructure/user/dtos/update-user.dto';
 import { Role } from 'src/domain/user/entities/role.enum';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 
 /**
  * Servicio para la gestión de usuarios en el sistema
