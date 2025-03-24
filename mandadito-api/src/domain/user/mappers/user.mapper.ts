@@ -1,5 +1,6 @@
 // src/domain/user/mappers/user.mapper.ts
 import { User } from '../entities/user.entity';
+import { Role } from '../entities/role.enum';
 
 /**
  * @interface PersistenceUserModel
@@ -15,6 +16,7 @@ interface PersistenceUserModel {
     phone: string;
     password: string;
     verify: boolean;
+    roles: Role[]; // Cambiado a Role[] en lugar de string[] para reflejar el enum Role en UserMode
     created_at: Date;
     updated_at: Date;
 }
@@ -38,6 +40,7 @@ export class UserMapper {
             raw.password,
             raw.phone,
             raw.verify,
+            raw.roles,
             raw.created_at,
             raw.updated_at,
         );
@@ -57,6 +60,7 @@ export class UserMapper {
             phone: user.phone,
             password: user.password,
             verify: user.verify,
+            roles: user.roles,
             created_at: user.createdAt,
             updated_at: user.updatedAt,
         };
