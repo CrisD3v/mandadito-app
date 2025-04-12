@@ -5,7 +5,7 @@ import { Entity, Column, PrimaryColumn, CreateDateColumn, UpdateDateColumn } fro
  * @author CrisDev
  * @version 1.0.0
  */
-@Entity('orders')
+@Entity()
 export class Order {
     @PrimaryColumn('uuid')
     public readonly id: string;

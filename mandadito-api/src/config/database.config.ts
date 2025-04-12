@@ -28,7 +28,7 @@ export const databaseConfig = {
     username: configService.get<string>('DATABASE_USER', 'postgres'),
     password: configService.get<string>('DATABASE_PASSWORD', 'password'),
     database: configService.get<string>('DATABASE_NAME', 'mydatabase'), 
-    entities: [__dirname + '/../../domain/**/*.entity.{ts,js}'],    // Carga todas las entidades
+    entities: [__dirname + '/../domain/**/*.entity.{ts,js}'],    // Carga todas las entidades
     synchronize: configService.get<boolean>('DATABASE_SYNC', false), // ⚠️ Solo para desarrollo
     logging: configService.get<boolean>('DATABASE_LOGGING', true),
   }),
@@ -50,7 +50,7 @@ export const dataSource = new DataSource({
   username: process.env.DATABASE_USER || 'postgres',
   password: process.env.DATABASE_PASSWORD || 'password',
   database: process.env.DATABASE_NAME || 'mydatabase',
-  entities: [__dirname + '/../../domain/**/*.entity.{ts,js}'],
+  entities: [__dirname + '/../domain/**/*.entity.{ts,js}'],
   synchronize: process.env.DATABASE_SYNC === 'true',
   logging: process.env.DATABASE_LOGGING === 'true',
 });

@@ -19,7 +19,7 @@ import { Role } from '../entities/role.enum';
  * @property {Date} createdAt - Marca temporal de creación del registro
  * @property {Date} updatedAt - Marca temporal de última modificación
  */
-@Entity('users')
+@Entity()
 export class User {
   @PrimaryColumn('uuid')
   public readonly id: string;
